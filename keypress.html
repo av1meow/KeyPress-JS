@@ -1,0 +1,29 @@
+<!-- event listner for keypress -->
+<!-- find value of the key -->
+<!-- store the event inside a variable for the event itself  -->
+<!-- have to put DOCTYPE for it to run the html in the browser -->
+<!DOCTYPE html>
+<html>
+<body>
+<!-- opening text -->
+<p><h2>Step right up Ladies and Germs</h2></p>
+  <p><h3>Press any key on the keyboard and see your number.</h3></p>
+
+<!-- the size is the legnth you want the box -->
+<input type="text" size="120" onkeypress="myFunction(event)">
+<!-- event is how it knows when pressing a key on the keyboard -->
+<!-- id code is giving you the number from the key -->
+  <p id="kicode"></p>
+
+<!-- javascript begins -->
+<script>
+// in fire fox you can't use event event.keyCode it wont work need to change it to event.which
+// event.which contains the key code of the key which then pressed to display the number
+function myFunction(event) {
+    var x = event.which || event.which;
+    document.getElementById("kicode").innerHTML = "The keycode value is: " + x;
+}
+</script>
+<!-- javscript ends -->
+</body>
+</html>
